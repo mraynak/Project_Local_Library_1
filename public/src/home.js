@@ -49,6 +49,8 @@ function getMostPopularBooks(books) {
   return sortAndSlice(result)
 }
 
+//helper function is here
+
 function sortAndSlice(result) {
   return result.sort((amount1, amount2) => (amount2.count - amount1.count)).slice(0, 5)
 }
