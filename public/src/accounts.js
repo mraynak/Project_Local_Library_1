@@ -15,6 +15,18 @@ function getTotalNumberOfBorrows(account, books) {
     return total
   }
 
+// reduce function is here ended up needing a for/in loop but had already written the reduce also for this function 
+
+
+// function getTotalNumberOfBorrows(account, books) {
+//   return books.reduce((total, book) => {
+//     total += book.borrows.filter((borrow) => {
+//       return borrow.id === account.id
+//     }).length 
+//     return total
+//   },0)
+// }
+
 
   function getBooksPossessedByAccount(account, books, authors) {
     let howMany = books.filter((book) => book.borrows.find((match) => match.returned === false && match.id === account.id))
